@@ -1,0 +1,73 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #161414;
+  position: fixed; /* Fixe le menu en haut de la page */
+  width: 100%; /* Assure que le menu s'étend sur toute la largeur de la page */
+  top: 0; /* Positionne le menu en haut de la page */
+  z-index: 1000; /* Assure que le menu s'affiche au-dessus des autres éléments */
+}
+  .burger:focus {
+    color: #FF0000;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+h1{
+  color: #fff7f7;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+  
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #FF0000;
+    color: #ffffff;
+  }
+  /* Reset CSS */
+  * {
+    box-sizing: border-box;
+}
+  p, h1, h2, h3, button, a, li {
+    margin: 0;
+    padding: 0; 
+    font-weight: initial;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  /* Styles for smaller screens */
+  @media (max-width: 768px) {
+    .burger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #000000;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  }
